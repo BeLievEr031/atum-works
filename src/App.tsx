@@ -1,10 +1,10 @@
 import ContactForm from "./components/ContactForm"
-
+import LogoSrc from "./assets/logo.jpg"
 function App() {
   return (
     <div className='bg-black min-h-screen pb-10'>
       <nav className='pt-16 pb-28 flex justify-center'>
-        <img src="https://img1.wsimg.com/isteam/ip/a71af983-e4aa-4f77-9026-67837a6f1cfa/image.PNG/:/rs=h:136,cg:true,m/qt=q:95" alt="logo" className="-mb-5" />
+        <img src={LogoSrc} alt="logo" className="-mb-5" />
       </nav>
 
       <main className="flex justify-center pt-2">
