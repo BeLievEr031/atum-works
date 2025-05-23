@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState } from 'react';
 import Input from './Input';
@@ -6,13 +5,13 @@ interface IError {
     Name: "", Email: ""
 }
 export default function ContactForm() {
-    const [formData, setFormData] = useState({ Name: '', Email: '' });
+    const [formData] = useState({ Name: '', Email: '' });
     const [errors, setErrors] = useState<IError>({ Email: "", Name: "" });
 
-    const handleChange = (e: any) => {
-        setFormData({ ...formData, [e.target.name]: e.target.value });
-        setErrors({ ...errors, [e.target.name]: '' }); // clear error on change
-    };
+    // const handleChange = (e: any) => {
+    //     setFormData({ ...formData, [e.target.name]: e.target.value });
+    //     setErrors({ ...errors, [e.target.name]: '' }); // clear error on change
+    // };
 
     const validate = () => {
         const newErrors: { Name: string, Email: string } = { Name: "", Email: "" };
@@ -41,7 +40,7 @@ export default function ContactForm() {
     return (
         <form
             onSubmit={handleSubmit}
-            className="space-y-8 flex flex-col items-center w-full w-full mx-auto"
+            className="space-y-8 flex flex-col items-center w-full mx-auto"
         >
             <Input
                 label="Name*"
